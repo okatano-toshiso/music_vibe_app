@@ -1,66 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎵 Music Vibe App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Music Vibe Appは、音楽を通じて気分を高めるためのWebアプリケーションです。  
+LaravelとViteをベースに構築されており、モダンでスムーズなユーザー体験を提供します。
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 概要
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+このアプリは、ユーザーが音楽を検索・再生し、プレイリストを作成・共有できるプラットフォームです。  
+Spotify APIなどの外部サービスと連携し、リアルタイムで音楽データを取得します。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🧩 主な機能
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 🎧 楽曲検索（アーティスト名・曲名・ジャンルなど）
+- 💾 プレイリスト作成・保存
+- 🔗 Spotifyなどの外部API連携
+- 🌓 ダークモード対応UI
+- 📱 レスポンシブデザイン（スマホ・タブレット対応）
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ セットアップ手順
 
-## Laravel Sponsors
+### 1. リポジトリのクローン
+```bash
+git clone https://github.com/yourusername/music_vibe_app.git
+cd music_vibe_app
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 2. 依存関係のインストール
+```bash
+composer install
+npm install
+```
 
-### Premium Partners
+### 3. 環境設定
+`.env.example` をコピーして `.env` を作成し、必要な環境変数を設定します。
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### 4. データベースのマイグレーション
+```bash
+php artisan migrate
+```
 
-## Contributing
+### 5. 開発サーバーの起動
+```bash
+php artisan serve
+npm run dev
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ブラウザで以下にアクセス：
+```
+http://localhost:8000
+```
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## ⚙️ 使用技術
 
-## Security Vulnerabilities
+| カテゴリ | 技術 |
+|-----------|------|
+| フレームワーク | [Laravel 10](https://laravel.com/) |
+| フロントエンド | [Vite](https://vitejs.dev/), [Vue.js](https://vuejs.org/) |
+| スタイリング | [Tailwind CSS](https://tailwindcss.com/) |
+| データベース | MySQL / SQLite |
+| API連携 | Spotify API, Last.fm API |
+| テスト | PHPUnit |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📁 ディレクトリ構成（抜粋）
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+music_vibe_app/
+├── app/                # アプリケーションロジック
+├── resources/          # フロントエンドリソース（Blade, Vue, CSSなど）
+├── routes/             # ルーティング設定
+├── public/             # 公開ディレクトリ
+├── database/           # マイグレーション・シーディング
+├── vite.config.js      # Vite設定
+└── .env.example        # 環境変数サンプル
+```
+
+---
+
+## 🧑‍💻 開発者向けコマンド
+
+| コマンド | 説明 |
+|-----------|------|
+| `php artisan serve` | Laravel開発サーバーを起動 |
+| `npm run dev` | Vite開発サーバーを起動 |
+| `npm run build` | 本番用ビルドを生成 |
+| `php artisan migrate` | データベースマイグレーションを実行 |
+
+---
+
+## 🧪 テスト
+
+```bash
+php artisan test
+```
+
+---
+
+## 📝 ライセンス
+
+このプロジェクトは [MITライセンス](https://opensource.org/licenses/MIT) の下で公開されています。
+
+---
+
+## 📚 参考資料
+
+- [GitHub公式Markdown記法ガイド](https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Qiita: READMEの書き方まとめ](https://qiita.com/dfalcon0001/items/843b93d90f21b9e99d50)
+- [cpp-learning.com: READMEの作り方](https://cpp-learning.com/readme/)
+- [Reddit: GitHub README Templates](https://www.reddit.com/r/programming/comments/l0mgcy/github_readme_templates_creating_a_good_readme_is/?tl=ja)
